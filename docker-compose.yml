@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  default_theme_database:
+    container_name: default_theme_database
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASS}"
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER:  "${DB_USER}"
+      MYSQL_PASSWORD: "${DB_PASS}"
+    ports:
+      - "${FORWARD_PORT:-3306}:3306"
+  default_theme_wordpress_site:
+    container_name: default_theme_wordpress
+    depends_on:
+      - default_theme_database
+    image: wordpress:latest
+    volumes:
+      - ./docker/wp-content:/var/www/html/wp-content # mounting our code
+      - ./default_theme:/var/www/html/wp-content/themes/default_theme # mounting our code
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    ports:
+      - "${WORDPRESS_PORT}:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: "${DB_HOST}:${DB_PORT}"
+      WORDPRESS_DB_USER: "${DB_USER}"
+      WORDPRESS_DB_PASSWORD: "${DB_PASS}"
+      WORDPRESS_DB_NAME: "${DB_NAME}"
+      WORDPRESS_DEBUG: "${WORDPRESS_DEBUG}"
+      
+volumes:
+  db_data: {}
+  wordpress_data: {}
+
+networks:
+  default:
+    name: default_theme_network
+  default_theme_network:
+    external: true
+    name: default_theme_network

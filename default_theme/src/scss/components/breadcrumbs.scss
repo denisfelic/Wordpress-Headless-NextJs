@@ -1,0 +1,21 @@
+.custom-bread-crumbs-link{
+  nav > p{
+    @apply flex items-center gap-2 caption;   
+
+    a {
+      @apply no-underline;
+    }
+
+   
+  }
+
+  nav > p a:first-child {
+      @apply font-bold;
+  }
+  
+  .separator {
+    @apply inline-block bg-no-repeat bg-cover w-3 h-3;
+    background-image: url('/wp-content/themes/default_theme/assets/img/separator.svg');
+    
+  }
+}

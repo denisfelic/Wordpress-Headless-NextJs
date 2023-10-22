@@ -1,0 +1,20 @@
+/** Hero Carousel **/
+#hero-carousel {
+  .slick-slide {
+    height: auto; // ← that must not be ignored
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .slick-next.slick-arrow, .slick-prev.slick-arrow{
+    @apply absolute bottom-[20px] text-white z-10;
+    left: calc(50% + 70px);
+  }
+  .slick-prev.slick-arrow{
+    left: calc(50% - 70px);
+  }
+}

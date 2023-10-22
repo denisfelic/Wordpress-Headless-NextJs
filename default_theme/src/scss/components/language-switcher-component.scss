@@ -1,0 +1,41 @@
+.custom-language-switch-container {
+  @apply font-sans font-bold text-base no-underline text-black flex gap-2 relative;
+
+  .wpml-ls-legacy-list-horizontal {
+    @apply p-0;
+  }
+
+  // Current selected language
+  .wpml-ls-current-language {
+    @apply hidden #{!important};
+  }
+  ul {
+    @apply list-none flex flex-col gap-1 items-center;
+
+    li,
+    a {
+      @apply no-underline p-0 pt-1;
+    }
+  }
+}
+
+.custom-language-switch-container.cv-v2 {
+  @apply text-white;
+
+  .wpml-ls-legacy-list-horizontal {
+    @apply p-0;
+  }
+
+  // Current selected language
+  .wpml-ls-current-language {
+    @apply hidden #{!important};
+  }
+  ul {
+    @apply list-none flex flex-col gap-1 items-center;
+
+    li,
+    a {
+      @apply no-underline p-0 pt-1;
+    }
+  }
+}

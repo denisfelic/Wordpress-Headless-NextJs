@@ -1,0 +1,49 @@
+form.fluent_form_3 .ff-btn-submit {
+  background: #e67e22 !important;
+  @apply bg-secondary w-full text-white rounded-2xl h-[48px] px-[40px] py-[12px] font-bold  text-sm leading-[26px];
+
+  &:hover {
+    @apply bg-secondary-black;
+  }
+  &:focus {
+    @apply bg-secondary;
+  }
+}
+
+.acf-block input[type="tel"] {
+  @apply mt-[25px];
+}
+
+.fluentform .ff-el-input--label.ff-el-is-required.asterisk-right label:after {
+  @apply absolute;
+}
+
+.ff-el-form-check-label {
+  span {
+    @apply ml-3 text-grey-black;
+  }
+}
+
+.fluentform select {
+  @apply inline-block bg-no-repeat bg-cover w-3 h-3 outline-none;
+   background-image: url('/wp-content/themes/default_theme/assets/img/orange-arrow.svg') !important;
+   background-position: 90%;
+}
+
+select[name="phone_prefix"] {
+  width: 104px !important;
+  background-position: 90% !important;
+}
+
+
+#sidebar{
+  @apply overflow-y-auto  pb-10;
+}
+
+#menu-main-menu {
+  @apply pb-10 ;
+}
+
+.search-field {
+  @apply input_default ;
+}

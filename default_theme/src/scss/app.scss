@@ -1,0 +1,429 @@
+/*
+Theme Name: <Default-Theme-Name>
+Theme URI: https://default_theme.com
+Author: Buzzvel Team
+Author URI: https://buzzvel.com
+Description: Tailwind Theme (3.0.1)
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: <Default-Theme-Name>
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "abstracts/abstracts";
+@import "components/components";
+@import "vendor";
+@import "vendor/slick.css";
+@import "vendor/slick-theme.css";
+@import "../scss/components/checkbox.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+}
+
+// TODO: Create design system scss File
+@layer base {
+  body {
+    @apply text-[14px] leading-normal font-sans text-black;
+  }
+
+  input {
+    @apply h-10;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  select {
+    @apply border-black;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+    background-position: 96% !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  button {
+    @apply border-black;
+  }
+
+  .grid-base {
+    @apply max-w-container-primary h-full px-4 mx-auto lg:w-full xl:px-0;
+  }
+
+  h1 {
+    @apply text-[54px] leading-[120%] my-5;
+  }
+
+  .h1 {
+    @apply text-[54px] leading-[120%];
+  }
+
+  h2 {
+    @apply text-[40px] leading-normal my-5;
+  }
+  .h2 {
+    @apply text-[40px] leading-normal;
+  }
+
+  h3 {
+    @apply text-[32px] leading-normal my-5;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply my-5;
+  }
+
+  .block_default {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply my-0;
+    }
+    li {
+      list-style: none;
+      margin-left: 0px !important;
+    }
+  }
+
+  .h3 {
+    @apply text-[32px] leading-normal;
+  }
+
+  .title {
+    @apply text-[28px] leading-normal;
+  }
+  .subtitle {
+    @apply text-[20px] leading-normal;
+  }
+
+  .caption {
+    @apply text-[14px] leading-normal;
+  }
+
+  a {
+    @apply underline hover:font-bold;
+  }
+
+  // Do not remove this, but override this behavior when necessary
+  // Contents from user use this
+  ol,
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  li {
+    list-style: outside;
+    margin-left: 16px;
+  }
+
+  .bg-gradient {
+    background: linear-gradient(124.28deg, #0d8e3d 2.44%, #005827 94.59%);
+  }
+
+  .text-gradient-green {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(124.28deg, #0d8e3d 2.44%, #005827 94.59%);
+  }
+
+  .primary_btn {
+    @apply bg-secondary text-white rounded-2xl h-12 px-[80px] py-[14px] font-bold text-xl md:h-[56px] md:w-fit flex items-center justify-center;
+    font-family: "Inter";
+  }
+
+  .primary_btn:hover,
+  .secondary_btn_1:hover {
+    @apply bg-secondary-black;
+  }
+
+  .primary_btn:focus,
+  .secondary_btn_1:focus {
+    @apply bg-secondary text-grey-light;
+  }
+
+  .primary_btn:disabled,
+  .secondary_btn_1:disabled,
+  .secondary_btn_2,
+  .terciary_btn {
+    @apply bg-grey text-white;
+  }
+
+  .secondary_btn_1 {
+    @apply bg-secondary text-white rounded-2xl px-[20px] py-[12px] font-bold  text-sm leading-[26px] h-12 md:w-fit flex items-center justify-center;
+    font-family: "Inter";
+
+    &.white {
+      @apply bg-white text-black;
+    }
+
+    &.white:hover {
+      @apply bg-grey-light;
+    }
+
+    &.white:active {
+      @apply bg-white text-grey;
+    }
+
+    &.white:disabled {
+      @apply bg-grey text-white;
+    }
+  }
+
+  .secondary_btn_2 {
+    @apply bg-white text-black rounded-2xl h-[48px] px-[80px] py-[12px] font-bold  text-sm;
+    font-family: "Inter";
+  }
+
+  .secondary_btn_2:hover {
+    @apply bg-grey-light;
+  }
+
+  .secondary_btn_2:focus,
+  .secondary_btn_2:active {
+    @apply bg-white text-grey;
+  }
+
+  .terciary_btn {
+    @apply bg-grey-light flex justify-center items-center text-center text-black rounded-2xl  h-12  px-[80px] py-[12px] font-bold  text-sm md:h-[56px] md:w-fit;
+    font-family: "Inter";
+  }
+
+  .terciary_btn .icon {
+    @apply ml-3;
+  }
+
+  .terciary_btn:hover {
+    @apply bg-grey;
+  }
+
+  .terciary_btn:focus,
+  .terciary_btn:active {
+    @apply bg-grey-light text-grey;
+  }
+
+  .default_link {
+    @apply text-sm font-normal text-black border-b border-black;
+  }
+
+  .default_link:hover,
+  .default_link:active,
+  .default_link:focus {
+    @apply font-bold;
+  }
+
+  .input_default,
+  .acf-block input[type="text"],
+  .acf-block input[type="email"],
+  .acf-block input[type="tel"] {
+    @apply border-2 border-grey bg-white text-grey-black rounded-2xl text-sm font-normal pl-4 h-[56px] outline-none #{!important};
+  }
+
+  .acf-block textarea {
+    @apply border-2 border-grey bg-white text-grey-black rounded-2xl text-sm font-normal pl-4 min-h-[56px] outline-none #{!important};
+  }
+
+  .input_default:not(:placeholder-shown),
+  .input_default:disabled,
+  .acf-block input[type="text"]:disabled,
+  .acf-block input[type="text"]:not(:placeholder-shown),
+  .acf-block input[type="email"]:disabled,
+  .acf-block input[type="email"]:not(:placeholder-shown),
+  .acf-block input[type="tel"]:disabled,
+  .acf-block input[type="tel"]:not(:placeholder-shown) {
+    @apply bg-grey-light #{!important};
+  }
+
+  .input_default.error {
+    @apply border-error;
+  }
+
+  .selector_btn,
+  .acf-block select {
+    @apply h-[53px] text-black font-bold flex items-center px-[24px] py-[16px] rounded-2xl bg-grey-light rounded-2xl #{!important};
+  }
+
+  .selector_btn.active {
+    @apply bg-secondary text-white;
+  }
+
+  .selector_btn:hover {
+    @apply bg-grey;
+  }
+
+  .selector_btn:active,
+  .selector_btn:hover {
+    @apply bg-secondary;
+  }
+
+  .selector_btn svg {
+    @apply mr-3;
+  }
+
+  ol, ul {
+    @apply pl-5;
+  }
+
+  .secondary-color-filter {
+    // Equivalent to #E67E22
+    // filter: invert(66%) sepia(96%) saturate(3526%) hue-rotate(354deg)
+    //   brightness(99%) contrast(81%);
+  }
+
+  .hidden-search-desktop {
+    @apply flex items-center;
+    input {
+      @apply input_default h-[48px]  border-0  w-[414px];
+
+      @media (max-width: 1130px) {
+        @apply w-[350px];
+      }
+    }
+    .search-submit {
+      display: none;
+    }
+  }
+
+  .custom-logo-link-container.hidden {
+    .search-icon {
+      display: block !important;
+    }
+  }
+  header {
+    img.custom-logo {
+      @apply max-w-[50px];
+    }
+  }
+
+  #site-navigation {
+    .menu {
+      @apply list-none mt-[-30px];
+
+      .menu-item {
+        @apply lg:pl-5 text-white font-bold text-[24px];
+
+        a {
+          @apply mt-[48px] block text-[24px] #{!important};
+          text-decoration: none !important;
+        }
+      }
+      .sub-menu {
+        li {
+          @apply list-none ml-[40px];
+          a {
+            @apply font-normal text-[20px];
+            text-decoration: none !important;
+            margin-top: 16px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-carousel {
+    .prev,
+    .next {
+      @apply flex items-center justify-center cursor-pointer w-[56px] h-[48px];
+    }
+  }
+
+  .elipse-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .shadow-box {
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+  }
+  .elipse-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  footer {
+    padding-bottom: 17px;
+    ul.menu {
+      @apply flex flex-wrap justify-between grid-base bg-black px-[64px]  rounded-[32px] lg:rounded-[100px] py-[32px] lg:py-[24px] #{!important};
+
+      ul,
+      li,
+      a {
+        @apply text-white font-bold;
+        text-decoration: none;
+        outline: none;
+        list-style: none;
+      }
+      li {
+        @apply mr-3 lg:mr-0  lg:mb-0;
+        @media (max-width: 493px) {
+          @apply first:mb-[24px];
+        }
+      }
+    }
+
+    img.custom-logo {
+      @apply w-[124px] h-[124px] #{!important};
+    }
+  }
+
+  .shadow-box {
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .filter-button {
+    @apply py-3 px-6 h-12 min-w-fit rounded-2xl bg-grey-light text-black font-bold;
+    &.active {
+      @apply bg-secondary text-white;
+    }
+  }
+
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scroll-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .description_block_links {
+    a {
+      display: list-item;
+      list-style-type: disc;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+  }
+
+  .description_faq {
+    p {
+      margin-top: 16px;
+    }
+  }
+
+  .first-bottom {
+    :first-child {
+      margin-bottom: 26px;
+    }
+  }
+}

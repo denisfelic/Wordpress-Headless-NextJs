@@ -1,0 +1,19 @@
+ /** Header Menu **/
+#site-navigation {
+  li {
+    list-style: none;
+  }
+  .menu-main-menu-container {
+    @apply pt-5 lg:pt-0 lg:pl-20;
+    
+    ul.menu > li.menu-item {
+      @apply text-[32px];
+
+      ul.sub-menu {
+        @apply text-[20px];
+      }
+    }
+  }
+}
+
+

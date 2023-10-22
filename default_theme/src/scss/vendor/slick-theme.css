@@ -1,0 +1,4 @@
+/* Override */
+.slick-initialized .slick-slide {
+    display: flex !important;
+}

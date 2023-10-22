@@ -1,0 +1,12 @@
+form.search-form {
+    li {
+        list-style: none;
+      }
+    .search-field {
+        @apply pl-4 ;
+    }
+
+    .search-submit {
+        @apply bg-sky-100  px-4 ;
+    }
+}

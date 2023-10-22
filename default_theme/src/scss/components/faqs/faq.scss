@@ -1,0 +1,21 @@
+#faq-component-container {
+  .faq-button.active {
+    @apply bg-orange-400;
+  }
+}
+
+.faq_item_container {
+  &.active {
+    max-height: 10000px;
+
+    transition: all ease-in 500;
+
+    .arrow-img {
+      transform: unset !important;
+    }
+  }
+}
+
+.faq-shadow {
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
