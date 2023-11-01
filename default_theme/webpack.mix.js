@@ -4,7 +4,7 @@ require('laravel-mix-tailwind');
 
 
 mix
-    .js('src/js/app.js', 'main.js')
+    .ts('src/js/app.ts', 'main.js')
     .sass('src/scss/app.scss', 'style.css')
     .setPublicPath('').
     options({
