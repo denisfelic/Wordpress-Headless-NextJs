@@ -23,6 +23,21 @@ const associates = AssociativeComponent
 
 
 
+function MeuComponentReact(props) {
+
+  return (
+    <div>
+
+      <h2>{props.titulo}</h2>
+    </div>
+  );
+}
+
+window.MeuComponentReact = MeuComponentReact
+
+
+
+
 
 // window.quizz = new Quizz();
 // window.menu = new Menu();

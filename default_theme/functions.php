@@ -8,6 +8,7 @@
  * @package Default_Theme
  */
 
+
 /** Remove meta generator **/
 remove_action('wp_head', 'wp_generator');
 
@@ -182,7 +183,7 @@ function my_enqueue($hook)
 }
 add_action('admin_enqueue_scripts', 'my_enqueue');
 
-require_once get_template_directory() . "/vendor/autoload.php";
+//require_once get_template_directory() . "/vendor/autoload.php";
 /**
  * Implement the Custom Header feature.
  */
