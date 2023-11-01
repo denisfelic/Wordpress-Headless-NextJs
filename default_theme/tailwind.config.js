@@ -2,6 +2,7 @@ module.exports = {
   mode: 'jit',
 
   content: require('fast-glob').sync([
+    './src/js/react/**/*.tsx',
     './src/**/*.php',
     './template-parts/**/*.php',
     './*.php',

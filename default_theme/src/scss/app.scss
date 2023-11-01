@@ -56,6 +56,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     @apply border-black;
   }
 
+  .bg-purple-gradient {
+    background: var(--Gradient_purple, linear-gradient(137deg, #CE90FF 17.64%, #2626FF 100%));
+  
+  }
   .grid-base {
     @apply max-w-container-primary h-full px-4 mx-auto lg:w-full xl:px-0;
   }
