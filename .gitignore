@@ -111,12 +111,12 @@ default_theme/vendor
 !docker-compose.yml
 uploads.ini
 
-wp-content
+
 docker
 # !docker
 # docker/wp-content/plugins/wordpress-importer
 # docker/wp-content/themes/twentytwentyone
 # docker/wp-content/themes/twentytwentytwo
 # docker/wp-content/themes/twentytwentythree
-
+!docker/wp-content/plugins/wp-graphql
 !.env
