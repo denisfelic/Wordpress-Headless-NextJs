@@ -1,0 +1,139 @@
+{
+    "key": "group_6566953e0d5cb",
+    "title": "Example block 2",
+    "fields": [
+        {
+            "key": "field_6566953e136bf",
+            "label": "textos",
+            "name": "textos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Adicionar linha",
+            "show_in_graphql": 1,
+            "graphql_description": "",
+            "graphql_field_name": "textos",
+            "graphql_non_null": 0,
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6566954d136c0",
+                    "label": "Título",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "show_in_graphql": 1,
+                    "graphql_description": "",
+                    "graphql_field_name": "titulo",
+                    "graphql_non_null": 0,
+                    "parent_repeater": "field_6566953e136bf"
+                },
+                {
+                    "key": "field_656699dabfcdb",
+                    "label": "TaxtQuery",
+                    "name": "taxtquery",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "show_in_graphql": 1,
+                    "graphql_description": "",
+                    "graphql_field_name": "taxtquery",
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_6566953e136bf"
+                }
+            ]
+        },
+        {
+            "key": "field_65669a2534ae0",
+            "label": "Taxq",
+            "name": "taxq",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "show_in_graphql": 1,
+            "graphql_description": "",
+            "graphql_field_name": "taxq",
+            "multiple": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/my-second-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "exampleBlock2",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1701223088
+}
