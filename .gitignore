@@ -120,3 +120,5 @@ docker
 # docker/wp-content/themes/twentytwentythree
 !docker/wp-content/plugins/wp-graphql
 !.env
+
+!plugins.zip
