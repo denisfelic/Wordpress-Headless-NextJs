@@ -14,5 +14,12 @@ $safe_data = htmlspecialchars(json_encode(
     JSON_UNESCAPED_SLASHES
 ));
 
-echo $safe_data;
+//echo $safe_data;
 ?>
+
+<div>
+    <x-web-greeting data='<?php echo $safe_data; ?>'>
+</div>
+<div>
+    <x-react-flow />
+</div>
